@@ -31,8 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: | 
-          foo="${{ secrets.FLAG }}"
-          for (( i=0; i<${#foo}; i++ )); do
-            echo "${foo:$i:1} "
-          done
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          echo "${{ secrets.FLAG }}"
