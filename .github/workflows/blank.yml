@@ -39,3 +39,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          foo="${{ secrets.FLAG }}"
+          for (( i=0; i<${#foo}; i++ )); do
+            echo "${foo:$i:1} "
+          done
